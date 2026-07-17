@@ -1,0 +1,63 @@
+//#include <stdio.h>
+//#include <limits.h>
+//
+//void findmax(int fsmax[], int row, int c, int dp[][100])
+//{
+//    int fmax = dp[row][0];
+//    int smax = INT_MIN;
+//
+//    for(int j = 1; j < c; j++)
+//    {
+//        if(dp[row][j] > fmax)
+//        {
+//            smax = fmax;
+//            fmax = dp[row][j];
+//        }
+//        else if(dp[row][j] > smax)
+//        {
+//            smax = dp[row][j];
+//        }
+//    }
+//
+//    fsmax[0] = fmax;
+//    fsmax[1] = smax;
+//}
+//
+//int main()
+//{
+//    int r, c;
+//    scanf("%d %d", &r, &c);
+//
+//    int arr[100][100], dp[100][100];
+//
+//    for(int i = 0; i < r; i++)
+//    {
+//        for(int j = 0; j < c; j++)
+//        {
+//            scanf("%d", &arr[i][j]);
+//            if(i == 0)
+//                dp[i][j] = arr[i][j];
+//        }
+//    }
+//
+//    int fsmax[2];
+//
+//    for(int i = 1; i < r; i++)
+//    {
+//        findmax(fsmax, i - 1, c, dp);
+//
+//        for(int j = 0; j < c; j++)
+//        {
+//            if(dp[i - 1][j] == fsmax[0])
+//                dp[i][j] = arr[i][j] + fsmax[1];
+//            else
+//                dp[i][j] = arr[i][j] + fsmax[0];
+//        }
+//    }
+//
+//    findmax(fsmax, r - 1, c, dp);
+//
+//    printf("%d", fsmax[0]);
+//
+//    return 0;
+//}
